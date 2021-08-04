@@ -4,11 +4,27 @@
      URL: play.google.com
    tasks:
      - name: print a nariable
-       debug:
+       ansible.builtin.debug:
          msg: "URL = {{URL}}"
      - name: print task variable
-       debug:
+       ansible.builtin.debug:
          msg: "URL = {{URL}}"
        vars:
          URL: task.google.com
 
+
+ - name: Demo on Inv variables
+   hosts: all
+   tasks:
+     - name: Print a Variable
+       ansible.builtin.debug:
+         msg: "URL = {{URL}}"
+
+ - name: Demo on file variables
+    hosts: all
+    vars_file:
+      - vars.yml
+    tasks:
+      - name: Print a Variable
+        ansible.builtin.debug:
+          msg: "URL = {{URL}}"
