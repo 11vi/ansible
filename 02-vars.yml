@@ -22,10 +22,10 @@
 
 
  - name: Demo on file variables
-    hosts: all
-    vars_files:
-      - vars.yml
-    tasks:
-      - name: Print a Variable
-        ansible.builtin.debug:
-          msg: "URL = {{URL}}"
+   hosts: all
+   vars_files:
+     - vars.yml
+   tasks:
+     - name: Print a Variable
+       ansible.builtin.debug:
+         msg: "URL = {{URL}}"
