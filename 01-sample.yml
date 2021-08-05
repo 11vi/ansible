@@ -12,9 +12,3 @@
       ansible.builtin.debug:
         msg: Bye
 
-- name: Demo on facts
-  hosts: all
-  tasks:
-- name: Print a fact variable
-    debug:
-      msg: "Hostname = {{ansible_fqdn}}"
