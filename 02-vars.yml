@@ -1,7 +1,7 @@
 - name : demo on  variables
   hosts: all
   vars:
-  URL: sample.com
+    URL: sample.com
   tasks:
    - name: variable from play
      debug:
