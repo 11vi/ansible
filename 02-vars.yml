@@ -11,3 +11,19 @@
         msg: "URL = {{URL}}"
       vars:
         URL: task.google.com
+
+ - name: Demo on Inv variables
+   hosts: all
+   tasks:
+     - name: Print a Variable
+       ansible.builtin.debug:
+         msg: "URL = {{URL}}"
+
+ - name: Demo on File variables
+   hosts: all
+   vars_files:
+     - vars.yml
+   tasks:
+     - name: Print a Variable
+       ansible.builtin.debug:
+         msg: "URL = {{URL}}"
