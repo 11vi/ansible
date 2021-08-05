@@ -34,24 +34,3 @@
     - name: Print a fact variable
       debug:
         msg: "Hostname = {{ansible_fqdn}}"
-
-- name: Demo on register variables
-  hosts: all
-  tasks:
-    - name: Run uptime command
-      ansible.builtin.shell: uptime
-      register: out
-
-    - name: Set a variable
-      ansible.builtin.set_fact:
-        UPTIME: "{{out.stdout}}"
-
-    - name: Print output
-      ansible.builtin.debug:
-        msg: "{{UPTIME}}"
-
-- name: Demo on vars from roles
-  hosts: all
-  roles:
-    - name: demo
-
