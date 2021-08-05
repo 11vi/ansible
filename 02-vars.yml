@@ -9,5 +9,5 @@
    - name: variable from task
      vars:
         URL: sample.task.com
-      debug:
-      msg: "{{URL}}"
+     debug:
+       msg: "{{URL}}"
