@@ -7,10 +7,11 @@
        ansible.builtin.debug:
          msg: "URL = {{URL}}"
      - name: print task variable
+        vars:
+           URL: task.google.com
        ansible.builtin.debug:
          msg: "URL = {{URL}}"
-       vars:
-         URL: task.google.com
+
 
  - name: Demo on Inv variables
    hosts: all
@@ -21,7 +22,6 @@
 
  - name: Demo on file variables
    hosts: all
-   gather_facts: no
    vars_files:
      - vars.yml
    tasks:
