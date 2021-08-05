@@ -1,30 +1,8 @@
- - name: Demo on variable
-   hosts: all
-   vars:
-     URL: play.google.com
-   tasks:
-     - name: print a nariable
-       debug:
-         msg: {{URL}}
-     - name: print task variable
-       vars:
-        URL: task.google.com
-       debug:
-         msg: {{URL}}
-
-
- - name: Demo on Inv variables
-   hosts: all
-   tasks:
-     - name: Print a Variable
-       ansible.builtin.debug:
-         msg: "URL = {{URL}}"
-
- - name: Demo on file variables
-   hosts: all
-   vars_files:
-      - vars.yml
-   tasks:
-     - name: Print a Variable
-       ansible.builtin.debug:
-         msg: "URL = {{URL}}"
+- name : demo on  variables
+  hosts: all
+  vars:
+  URL: sample.com
+  tasks:
+   - name: variable from play
+     debub:
+     msg: {{URL}}
