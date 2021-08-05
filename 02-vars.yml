@@ -6,3 +6,8 @@
    - name: variable from play
      debug:
        msg: "{{URL}}"
+   - name: variable from task
+     vars:
+        URL: sample.task.com
+      debug:
+      msg: "{{URL}}"
