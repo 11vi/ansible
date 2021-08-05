@@ -4,13 +4,13 @@
      URL: play.google.com
    tasks:
      - name: print a nariable
-       ansible.builtin.debug:
-         msg: "URL = {{URL}}"
+       debug:
+         msg: {{URL}}
      - name: print task variable
         vars:
-           URL: task.google.com
-       ansible.builtin.debug:
-         msg: "URL = {{URL}}"
+         URL: task.google.com
+       debug:
+         msg: {{URL}}
 
 
  - name: Demo on Inv variables
